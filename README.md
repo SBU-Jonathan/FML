@@ -89,17 +89,18 @@ to clone the repository.
 
 Type:
 
-     $(cola) $CONDA_PREFIX/bin/git https://github.com/SBU-UNESP-2022-COCOA/FML.git
+     $(cola) $CONDA_PREFIX/bin/git https://github.com:SBU-Jonathan/FML.git
      
      $(cola) cd ./FML
 
 (**expert**) Cola developers with set ssh keys in GitHub may find more convenient to use the command
 
-    $(cola) $CONDA_PREFIX/bin/git clone git@github.com:SBU-UNESP-2022-COCOA/FML.git
+    $(cola) $CONDA_PREFIX/bin/git clone git@github.com:SBU-Jonathan/FML.git
 
 (**Warning**) We assumed in the command above that users have installed the pre-requisite packages (including git-lfs) via the recommended **Conda installation method**. With other installation method, `$CONDA_PREFIX/bin/git` should be replaced with `git`. 
 
-Cola is made aware of the chosen installation method (default is via Conda) of required packages via special environment keys located on the [set_installation_options](https://github.com/SBU-UNESP-2022-COCOA/FML/blob/master/set_installation_options) script, as shown below
+Cola is made aware of the chosen installation method (default is via Conda) of required packages via special environment keys located on the [set_installation_options](https://github.com/SBU-Jonathan/FML/blob/master/set_installation_options) script, as shown below
+
 
     [Extracted from set_installation_options script]
     #  ---------------------------------------------------------------------------
@@ -130,7 +131,7 @@ to compile Cola
 
 (**warning**) Users will see a terminal that looks like this: `$(cola)(.local)`. *This is a feature, not a bug*! 
 
-(**expert**) Why `$(cola)(.local)` is a feature, not a bug? The Cola environment can be the same for all Cola instances, with [start_cola](https://github.com/SBU-UNESP-2022-COCOA/FML/blob/master/start_cola)/[stop_cola](https://github.com/SBU-UNESP-2022-COCOA/FML/blob/master/start_cola) loading/unloading the corresponding `LD_LIBRARY_PATH`, `CPATH`, `C_INCLUDE_PATH`, `CPLUS_INCLUDE_PATH` and `PATH`. *Why more than one Cola instance?* While users may be running chains in one instance, they might use a second instantiation to make experimental changes.
+(**expert**) Why `$(cola)(.local)` is a feature, not a bug? The Cola environment can be the same for all Cola instances, with [start_cola](https://github.com/SBU-Jonathan/FML/blob/master/start_cola)/[stop_cola](https://github.com/SBU-Jonathan/FML/blob/master/stop_cola) loading/unloading the corresponding `LD_LIBRARY_PATH`, `CPATH`, `C_INCLUDE_PATH`, `CPLUS_INCLUDE_PATH` and `PATH`. *Why more than one Cola instance?* While users may be running chains in one instance, they might use a second instantiation to make experimental changes.
 
 **Step 3 of 5**: select the number of OpenMP cores
     
